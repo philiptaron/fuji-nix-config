@@ -11,7 +11,7 @@
     nixosConfigurations.fuji = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [
-        { networking.hostname = "fuji"; }
+        { networking.hostName = "fuji"; }
         { system.stateVersion = "23.11"; }
         { nixpkgs.config.allowUnfree = true; }
         { nixpkgs.overlays = builtins.attrValues self.overlays; }
